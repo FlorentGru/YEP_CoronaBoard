@@ -12,3 +12,5 @@
 *.ntvs*
 *.njsproj
 *.sln
+
+./test/node_modules
