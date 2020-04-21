@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LoginComponent from "../views/Login.vue"
-import SecureComponent from "../views/HomePage.vue"
+import HomePageComponent from "../views/HomePage.vue"
+import AboutComponent from "../views/About.vue"
 
 Vue.use(VueRouter)
 
@@ -21,7 +22,12 @@ export default new VueRouter({
         {
             path: "/HomePage",
             name: "HomePage",
-            component: SecureComponent
+            component: HomePageComponent
+        },
+        {
+            path: "/About",
+            name: "About",
+            component: AboutComponent
         }
     ]
 })

@@ -23,7 +23,7 @@
                 if(this.input.username != "" && this.input.password != "") {
                     if(this.input.username == "Lucas" && this.input.password == "Lucas") {
                         this.$emit("authenticated", true);
-                        this.$router.replace({ name: "secure" });
+                        this.$router.replace({ name: "HomePage" });
                     } else {
                         console.log("The username and / or password is incorrect");
                     }
