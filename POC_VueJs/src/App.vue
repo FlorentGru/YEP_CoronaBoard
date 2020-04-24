@@ -6,13 +6,13 @@
 </template>
 
 <script>
-    import { mapState } from 'vuex'
+    import { mapGetters } from 'vuex'
     import Navigation from './components/Navigation'
 
     export default {
         components: { Navigation },
         computed: {
-            ...mapState(['currentUser'])
+            ...mapGetters(['currentUser'])
         }
 
     }
