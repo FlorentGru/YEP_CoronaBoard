@@ -11,9 +11,10 @@
 <script>
     export default {
         name: 'HomePage',
-        message: "test",
         data() {
-            return {};
+            return {
+                message: "i am beautifull",
+            };
         }
     }
 </script>

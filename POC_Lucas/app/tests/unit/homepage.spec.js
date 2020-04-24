@@ -6,5 +6,14 @@ describe('HomePage.vue', () => {
     it('expect the render to contain a specific html conponent', () => {
       expect(wrapper.html()).toContain('<h1>HomePage</h1>')
     })
-  })
-  
+    
+    it('verify the variable value at init', () => {
+      expect(wrapper.vm.message).toBe("i am beautifull")
+    })
+
+    it('Change the variable value that have been init', () => {
+      expect(wrapper.vm.message).toBe("i am beautifull")
+      wrapper.vm.message = "changed"
+      expect(wrapper.vm.message).toBe("changed")
+    })
+})
