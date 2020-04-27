@@ -10,9 +10,7 @@
                 </div>
             </div>
             <div class="col2">
-                <div class="post">
-                    <p>{{this.summary.Countries}}</p>
-                </div>
+                <Maps></Maps>
             </div>
         </section>
     </div>
@@ -24,8 +22,13 @@
 
     import moment from "moment"
 
+    import Maps from '@/components/Maps'
+
     export default {
         name: "Main",
+        components: {
+            Maps
+        },
         data() {
             return {
 
