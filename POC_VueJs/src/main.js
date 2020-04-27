@@ -4,6 +4,8 @@ import router from './router'
 import {store} from "./store";
 const fb = require('./firebaseConfig.js')
 import './assets/scss/app.scss'
+import 'chart.js'
+import 'hchs-vue-charts'
 
 Vue.config.productionTip = false
 

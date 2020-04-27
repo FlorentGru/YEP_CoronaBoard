@@ -7,6 +7,7 @@ import Dashboard from '@/pages/Dashboard'
 import Settings from '@/pages/Settings'
 import Main from '@/pages/Main'
 import Country from "../pages/Country"
+import VueChartJS from '@/pages/VueChartJS'
 
 Vue.use(Router)
 
@@ -47,9 +48,17 @@ const router = new Router({
             }
         },
         {
-            path: '/:country',
+            path: '/country/:country',
             name: 'Country',
             component: Country,
+            meta: {
+                requiresAuth: false
+            }
+        },
+        {
+            path: '/charts',
+            name: 'Charts',
+            component: VueChartJS,
             meta: {
                 requiresAuth: false
             }
