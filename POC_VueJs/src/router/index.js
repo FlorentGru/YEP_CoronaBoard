@@ -2,9 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import firebase from 'firebase'
 
-import Login from '@/components/Login'
-import Dashboard from '@/components/Dashboard'
-import Settings from '@/components/Settings'
+import Login from '@/pages/Login'
+import Dashboard from '@/pages/Dashboard'
+import Settings from '@/pages/Settings'
+import Main from '@/pages/Main'
+import Country from "../pages/Country"
 
 Vue.use(Router)
 
@@ -34,6 +36,22 @@ const router = new Router({
             component: Settings,
             meta: {
                 requiresAuth: true
+            }
+        },
+        {
+            path: '/',
+            name: 'Main',
+            component: Main,
+            meta: {
+                requiresAuth: false
+            }
+        },
+        {
+            path: '/:country',
+            name: 'Country',
+            component: Country,
+            meta: {
+                requiresAuth: false
             }
         }
     ]
