@@ -2,7 +2,17 @@
     <div id="dashboard">
         <section>
             <div class="col1">
-                <p>{{ this.summary }}</p>
+                <div class="profile">
+                    <h5>Global</h5>
+                    <p>Total confirmed cases: {{ this.summary.Global.TotalConfirmed }} </p>
+                    <p>Total death cases: {{ this.summary.Global.TotalDeaths }} </p>
+                    <p>Total recovered cases: {{ this.summary.Global.TotalRecovered }} </p>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="post">
+                    <p>{{this.summary.Countries}}</p>
+                </div>
             </div>
         </section>
     </div>

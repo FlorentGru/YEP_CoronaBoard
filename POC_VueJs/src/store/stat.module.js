@@ -1,7 +1,7 @@
 import Stat from "../data/StatsApi"
 
 const state = {
-    summary: []
+    summary: {}
 };
 
 const getters = {
@@ -27,7 +27,7 @@ const mutations = {
         if (val) {
             state.summary = val
         } else {
-            state.summary = []
+            state.summary = {}
         }
     }
 };

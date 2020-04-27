@@ -7,6 +7,12 @@ const StatApi = {
         return axios({ method: "GET", "url": `${baseUrl}/summary` }).catch(error => {
             console.log(error)
         })
+    },
+
+    getCountryData(country) {
+        return axios({ method: "GET", "url": `${baseUrl}/total/dayone/country/${country}` }).catch(error => {
+            console.log(error)
+        })
     }
 }
 

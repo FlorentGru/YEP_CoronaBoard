@@ -2,12 +2,13 @@
     <header>
         <section>
             <div class="col1">
-                <router-link to="dashboard"><h3>Mon réseau social</h3></router-link>
+                <router-link to="dashboard"><h3>Covid-19 DataViz</h3></router-link>
                 <ul class="inline">
-                    <li><router-link to="/">Main Page</router-link></li>
-                    <li><router-link to="dashboard">Dashboard</router-link></li>
-                    <li><router-link to="settings">Settings</router-link></li>
-                    <li><a @click="logout">logout</a></li>
+                    <li><router-link to="/">World</router-link></li>
+                    <li><router-link to="/france">France</router-link></li>
+                    <li><router-link v-if="this.currentUser" to="dashboard">Dashboard</router-link></li>
+                    <li><router-link v-if="this.currentUser" to="settings">Settings</router-link></li>
+                    <li><a v-if="this.currentUser" @click="logout">logout</a></li>
                 </ul>
             </div>
         </section>
@@ -15,6 +16,8 @@
 </template>
 
 <script>
+    import {mapGetters} from "vuex"
+
     const fb = require('../firebaseConfig.js')
 
     export default {
@@ -27,6 +30,9 @@
                     console.log(err)
                 })
             }
+        },
+        computed: {
+            ...mapGetters(['currentUser'])
         }
     }
 </script>
