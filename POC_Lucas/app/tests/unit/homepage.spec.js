@@ -11,9 +11,10 @@ describe('HomePage.vue', () => {
       expect(wrapper.vm.message).toBe("i am beautifull")
     })
 
-    it('Change the variable value that have been init', () => {
+    it('Change the variable value that have been init', async () => {
       expect(wrapper.vm.message).toBe("i am beautifull")
       wrapper.vm.message = "changed"
+      await wrapper.vm.$nextTick() // pour actualliser la vue
       expect(wrapper.vm.message).toBe("changed")
     })
 })
