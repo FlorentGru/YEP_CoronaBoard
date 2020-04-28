@@ -3,11 +3,12 @@
         <section>
             <div class="col1">
                 <div class="profile">
-                    <h5>Global</h5>
+                    <h5>World</h5>
                     <p>Total confirmed cases: {{ this.summary.Global.TotalConfirmed }} </p>
                     <p>Total death cases: {{ this.summary.Global.TotalDeaths }} </p>
                     <p>Total recovered cases: {{ this.summary.Global.TotalRecovered }} </p>
                 </div>
+                <a class="twitter-timeline" data-width="400" data-height="400" href="https://twitter.com/WHO?ref_src=twsrc%5Etfw">Tweets by WHO</a>
             </div>
             <div class="col2">
                 <Maps></Maps>
@@ -39,6 +40,10 @@
         },
         mounted() {
             this.fetchSummaryData()
+
+            let twitterScript = document.createElement('script')
+            twitterScript.setAttribute('src', 'https://platform.twitter.com/widgets.js')
+            document.head.appendChild(twitterScript)
         },
         methods: {
             ...mapActions(['fetchSummaryData'])
