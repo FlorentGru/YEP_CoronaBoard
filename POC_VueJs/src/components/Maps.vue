@@ -80,7 +80,7 @@
                                     radius: Math.log(element.TotalConfirmed),
                                     fillColor: "red",
                                     fillOpacity: 0.8
-                                }).bindPopup("<center>" + element.Country + "<br/>Confirmed Cases : " + element.TotalConfirmed + "<\center>");
+                                }).bindPopup("<center>" + element.Country + "<br/>Confirmed Cases : " + element.TotalConfirmed + "<br/><a href=\"/country/" + element.Country + "\">More informations</a><\center>");
                             }
                         });
                         this.markersLayer.addLayer(marker);
@@ -111,7 +111,7 @@
                                     fillColor: "blue",
                                     fillOpacity: 0.8
                                 }).bindPopup("<center>" + element.Country + "<br/>Total Deaths : " + element.TotalDeaths + 
-                                    "<br/>Fatality Ratio : " + ((element.TotalDeaths / element.TotalConfirmed) * 100).toFixed(2) + "% <\center>");
+                                    "<br/>Fatality Ratio : " + ((element.TotalDeaths / element.TotalConfirmed) * 100).toFixed(2) + "% <br/><a href=\"/country/" + element.Country + "\">More informations</a><\center>");
                             }
                         });
                         this.markersLayer.addLayer(marker);
@@ -141,7 +141,7 @@
                                     radius: Math.log(element.TotalRecovered),
                                     fillColor: "green",
                                     fillOpacity: 0.8
-                                }).bindPopup("<center>" + element.Country + "<br/>Total Recovered : " + element.TotalRecovered + "<\center>");
+                                }).bindPopup("<center>" + element.Country + "<br/>Total Recovered : " + element.TotalRecovered + "<br/><a href=\"/country/" + element.Country + "\">More informations</a><\center>");
                             }
                         });
                         this.markersLayer.addLayer(marker);
